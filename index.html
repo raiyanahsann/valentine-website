@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To My Forever Valentine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="apocalypse.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container" id="slide1">
+        <p class="message">To my forever valentine:<br><br>
+        I’m probably not the best at expressing my love, nor the perfect boyfriend. But you are the best thing to ever come into my life. These six years have been a rollercoaster ride, but I wouldn’t have wanted to share it with anyone else but you. Six years down, probably sixty more to go, and countless afterlives beyond that. Every day, I wake up knowing you're in my life, and you are truly the most precious thing I have. I wouldn’t trade you for anything in this world. Thank you for sticking by me through thick and thin. I love you more than words can say.<br><br>
+        Will you be my Valentine this year, and my wife somewhere in the future?</p>
+        <input type="text" id="response" placeholder="Type your answer here...">
+        <button onclick="checkResponse()">Submit</button>
+    </div>
+
+    <div class="container hidden" id="slide2">
+        <img src="IMG_1263.jpeg" alt="Us together">
+        <p class="message">I hope I die trying to buy you all the happiness in the world. Thanks for giving my life a purpose.</p>
+    </div>
+
+    <script>
+        function checkResponse() {
+            const validResponses = ["YES", "yes", "Yess", "Yeah"];
+            let response = document.getElementById("response").value;
+            if (validResponses.includes(response)) {
+                document.getElementById("slide1").classList.add("hidden");
+                document.getElementById("slide2").classList.remove("hidden");
+            } else {
+                alert("Please enter a valid response!");
+            }
+        }
+    </script>
+</body>
+</html>
